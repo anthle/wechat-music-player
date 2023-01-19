@@ -1,0 +1,38 @@
+/* components/song-item-v2/song-item-v2.wxss */
+.item{
+  display: flex;
+  margin: 16rpx 0 10rpx 10rpx;
+  align-items: center;
+}
+.index{
+  font-size: 30rpx;
+  padding: 12rpx;
+}
+.info{
+  flex: 1;
+  margin-left: 16rpx;
+}
+.info .title{
+  font-size: 30rpx;
+}
+.info .name{
+  font-size: rpx;
+}
+.info .source{
+  display: flex;
+  align-items: center;
+  font-size: 24rpx;
+  color: #666;
+  margin-top: 10rpx;
+}
+.source .image{
+  width: 38rpx;
+  height: 22rpx;
+  margin-right: 10rpx;
+}
+.album .album-image{
+  width: 120rpx;
+  height: 120rpx;
+  margin-right: 10rpx;
+  border-radius: 10rpx;
+}

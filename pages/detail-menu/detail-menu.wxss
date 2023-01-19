@@ -1,0 +1,18 @@
+page{
+  padding:  0 20rpx;
+  box-sizing: border-box;
+}
+
+.list{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+.list .iten{
+  width: 48%;
+}
+.title{
+  font-size: 38rpx;
+  font-weight: 700;
+  margin: 20rpx 0;
+}

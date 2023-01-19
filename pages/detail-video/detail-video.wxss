@@ -1,0 +1,63 @@
+/* pages/detail-video/detail-video.wxss */
+page{
+  height: 100vh;
+}
+.video{
+  width: 100%;
+}
+.info{
+  padding: 30rpx;
+}
+.info .infoName{
+  font-size: 18px;
+  font-weight: 700;
+  margin-bottom: 10rpx;
+}
+.info .infoArtistName{
+  font-size: 12px;
+  font-weight: 200;
+  margin-bottom: 10rpx;
+}
+.info .infoCount{
+  font-size: 12px;
+  font-weight: 200;
+  margin-bottom: 10rpx;
+}
+.allRelatedVideo{
+  padding: 30rpx;
+}
+.allRelatedVideo .topTitle{
+  font-size: 18px;
+  margin-bottom: 20rpx;
+}
+.allRelatedVideo .relateVideoItem{
+  margin-bottom: 40rpx;
+  align-items: center;
+  display: flex;
+}
+
+.allRelatedVideo .relateVideoItem .relatedInfo .image{
+  width: 200rpx;
+  flex-shrink: 0;
+  border-radius: 12rpx;
+  display: inline-block;
+}
+/* .allRelatedVideo .relateVideoItem .relatedInfo .count{
+  font-size: 20rpx;
+} */
+.allRelatedVideo .relateVideoItem .content{
+  display: inline;
+  display: flex;
+  flex-direction: column;
+}
+.allRelatedVideo .relateVideoItem .content .title{
+  font-size: 30rpx;
+  margin-left: 20rpx;
+}
+.creatorName{
+  margin-left: 20rpx;
+  font-size: 25rpx;
+}
+.scroll{
+  height: calc(100% - 225px);
+}

@@ -1,0 +1,13 @@
+/* components/menu-area/menu-area.wxss */
+.list{
+  margin-left: -24rpx;
+  white-space: nowrap;
+}
+.list .menu-item{
+  display: inline-block;
+  width: 220rpx;
+  margin-right: 20rpx;
+}
+.list .menu-item:first-child{
+  margin-left: 24rpx;
+}

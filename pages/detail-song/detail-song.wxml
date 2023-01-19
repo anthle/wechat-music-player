@@ -1,0 +1,12 @@
+<!--pages/detail-song/detail-song.wxml-->
+<view class="header" wx:if="{{type ==='menu' && songInfos.name}}"> 
+  <menu-header songInfo="{{songInfos}}"></menu-header>
+</view>
+<view class="title" wx:else>{{songInfos.name}}</view>
+<view>
+  <block wx:for="{{songInfos.tracks}}" wx:key="id"> 
+  <view>
+    <song-item-v2 itemData="{{item}}" index="{{index+1}}"></song-item-v2>
+  </view>
+  </block>
+</view>

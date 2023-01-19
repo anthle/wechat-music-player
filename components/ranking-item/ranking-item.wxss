@@ -1,0 +1,48 @@
+/* components/ranking-item/ranking-item.wxss */
+.ranking-item{
+  display: flex;
+  justify-content: space-between;
+  overflow: hidden;
+  background-color: #eee;
+  border-radius: 12rpx;
+  margin-top: 20rpx;
+}
+.ranking-item .content{
+  padding: 24rpx;
+  overflow: hidden;
+}
+.ranking-item .content .name{
+  font-size: 34rpx;
+}
+.content .list{
+  font-size: 24rpx;
+}
+.content .list .item{
+  color: #333;
+  margin-top: 6rpx;
+  white-space: normal;
+  text-overflow: ellipsis;
+  overflow: hidden;
+}
+.item .singer{
+  color: rgb(65, 63, 63);
+}
+.album{
+  display: flex;
+  position: relative;
+}
+.album .image{
+  width: 220rpx;
+  height: 220rpx;
+  background-size: cover;
+}
+.album .count{
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  color: #fff;
+  font-size: 22rpx;
+  border-radius: 12rpx;
+  padding: 6rpx 10rpx;
+  background:rgba(0, 0, 0, .5)
+}

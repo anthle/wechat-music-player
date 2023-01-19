@@ -1,0 +1,35 @@
+{
+  "pages": [
+    "pages/main-music/main-music",
+    "pages/main-video/main-video",
+    "pages/detail-video/detail-video",
+    "pages/detail-search/detail-search",
+    "pages/detail-menu/detail-menu",
+    "pages/detail-song/detail-song",
+    "pages/music-player/music-player"
+  ],
+  "window": {
+    "backgroundTextStyle": "dark",
+    "navigationBarBackgroundColor": "#fff",
+    "navigationBarTitleText": "Weixin",
+    "navigationBarTextStyle": "black"
+  },
+  "tabBar": {
+    "list": [
+      {
+        "pagePath": "pages/main-music/main-music",
+        "text": "music",
+        "iconPath": "/assets/images/tabbar/music_normal.png",
+        "selectedIconPath": "/assets/images/tabbar/music_active.png"
+      },
+      {
+        "pagePath": "pages/main-video/main-video",
+        "text": "video",
+        "iconPath": "/assets/images/tabbar/video_normal.png",
+        "selectedIconPath": "/assets/images/tabbar/video_active.png"
+      }
+    ]
+  },
+  "style": "v2",
+  "sitemapLocation": "sitemap.json"
+}
