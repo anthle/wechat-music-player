@@ -1,1 +1,142 @@
 /* pages/music-player/music-player.wxss */
+.bg-image, .bg-cover{
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+}
+.bg-cover{
+  background: rgba(0,0,0,.4);
+  backdrop-filter:blur(30px);
+}
+
+
+/* 自定义bar */
+.tabs{
+  display: flex;
+  font-size: 28rpx;
+  color: #aaa;
+}
+.tabs .divider{
+  margin: 0 6rpx;
+}
+.tabs .active{
+  color: #fff;
+}
+
+/* 歌曲布局 */
+.music {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  box-sizing: border-box;
+  padding: 30rpx 60rpx;
+}
+
+.music .album {
+  display: flex;
+  align-items: center;
+  flex: 5;
+}
+
+.music .album .image {
+  width: 100%;
+  border-radius: 12rpx;
+}
+
+.music .info {
+  flex: 1;
+}
+
+.music .info .name {
+  font-size: 48rpx;
+  font-weight: 700;
+  color: #fff;
+}
+
+.music .info .singer {
+  font-size: 26rpx;
+  color: #ccc;
+  margin: 16rpx 0;
+}
+
+.music .lyric {
+  flex: 1;
+  height: 80rpx;
+  line-height: 80rpx;
+  font-size: 28rpx;
+  text-align: center;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  color: #fff;
+}
+
+.music .progress {
+  flex: 1;
+}
+
+.music .progress .slider {
+  padding: 0;
+  margin: 0 0 12rpx 18rpx;
+}
+
+.music .progress .time {
+  display: flex;
+  justify-content: space-between;
+  font-size: 24rpx;
+  color: #fff;
+}
+
+.music .controls {
+  flex: 1;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 20rpx 0 30rpx;
+}
+
+.controls .btn {
+  width: 60rpx;
+  height: 60rpx;
+  padding: 0;
+}
+
+.controls .btn.mode {
+  width: 80rpx;
+  height: 80rpx;
+}
+
+.controls .btn.play {
+  width: 120rpx;
+  height: 120rpx;
+}
+
+/* 歌词样式 */
+.lyric-list{
+  color: #aaa;
+  text-align: center;
+  height: 100%;
+  font-size: 28rpx;
+  padding: 40rpx;
+  box-sizing: border-box;
+  overflow: hidden;
+}
+.lyric-list ::-webkit-scrollbar{
+  display: none;
+}
+.lyric-list .item{
+  line-height: 50px;
+  overflow: visible;
+  /* text-overflow: ellipsis;
+  white-space: nowrap; */
+}
+.lyric-list .item.active{
+  color: #fff;
+  font-size: 32rpx;
+}
+
+
+

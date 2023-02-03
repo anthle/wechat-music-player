@@ -42,6 +42,34 @@
           "query": "type=menu&id=2167679218",
           "launchMode": "default",
           "scene": null
+        },
+        {
+          "name": "",
+          "pathName": "pages/music-player/music-player",
+          "query": "id=30284674",
+          "launchMode": "default",
+          "scene": null
+        },
+        {
+          "name": "",
+          "pathName": "pages/music-player/music-player",
+          "query": "id=90743831",
+          "launchMode": "default",
+          "scene": null
+        },
+        {
+          "name": "",
+          "pathName": "pages/music-player/music-player",
+          "query": "id=1454811222",
+          "launchMode": "default",
+          "scene": null
+        },
+        {
+          "name": "",
+          "pathName": "pages/music-player/music-player",
+          "query": "id=233931",
+          "launchMode": "default",
+          "scene": null
         }
       ]
     }

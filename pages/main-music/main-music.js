@@ -1,6 +1,7 @@
 // pages/main-music/main-music.js
 import {getMusicBanner,getSongMenuList} from "../../services/music"
 import recommendStore from "../../store/recommendStore"
+import playerStore from "../../store/playerStore"
 import rankingStore from "../../store/rankingStore"
 import querySelect from "../../utils/query-select"
 import {throttle} from "underscore"
@@ -84,4 +85,10 @@ Page({
       url: '../detail-song/detail-song?type=recommend',
     })
   },
+
+  onSongItemTap(event){
+    const index = event.currentTarget.dataset.index
+    playerStore.setState('playSongsList',this.data.recommendSongs)
+    playerStore.setState('playSongsIndex',index)
+  }
 })

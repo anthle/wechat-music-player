@@ -23,7 +23,7 @@
   <view>
     <block wx:for="{{recommendSongs}}" wx:key="id">
       <view>
-        <song-item-v1 itemData="{{item}}"></song-item-v1>
+        <song-item-v1 itemData="{{item}}" bindtap="onSongItemTap" data-index="{{index}}"></song-item-v1>
       </view>
     </block>
   </view>

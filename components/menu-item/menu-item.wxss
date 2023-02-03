@@ -27,6 +27,7 @@
 
 .menu-item .bottom{
   width: 100%;
+  height: 68rpx;
   font-size: 26rpx;
   white-space: normal;
   overflow: hidden;

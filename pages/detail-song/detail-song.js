@@ -1,7 +1,9 @@
 // pages/detail-song/detail-song.js
 import rankingStore from "../../store/rankingStore"
+import playerStore from "../../store/playerStore"
 import recommendSongs from '../../store/recommendStore'
 import {getRecommendSongData} from "../../services/music"
+
 
 Page({
   data: {
@@ -35,6 +37,11 @@ Page({
       recommendSongs.offState('recommendSongInfo',this.handleRanking)
     }
   },
+  onSongsListTap(event){
+    const index = event.currentTarget.dataset.index
+    playerStore.setState('playSongsList',this.data.songInfos.tracks)
+    playerStore.setState('playSongsIndex',index)
+  },
   handleRanking(value){
     if(this.data.type==='recommend'){
       value.name = '推荐歌曲'
@@ -46,7 +53,6 @@ Page({
   },
   async fetchMenuItemSong(){
     const res = await getRecommendSongData(this.data.id)
-    console.log(res);
     this.setData({songInfos:res.playlist})
   }
 })

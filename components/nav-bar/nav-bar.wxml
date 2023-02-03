@@ -1,0 +1,25 @@
+<!--components/nav-bar/nav-bar.wxml-->
+
+<!-- 自定义状态栏 -->
+<view class="nav-bar">
+  <view class="status" style="height: {{statusBarHeight}}px;"></view>
+  <view class="nav">
+    <view class="left" bindtap="onLeftClick">
+      <view class="slot">
+        <slot name="left"></slot>
+      </view>
+      <view class="defalut">
+        <image class="image" src="/assets/images/icons/arrow-left-bold.png" mode=""/>
+      </view>
+    </view>
+    <view class="center">
+      <view class="slot">
+        <slot name="center"></slot>
+      </view>
+      <view class="defalut">
+        {{title}}
+      </view>
+    </view>
+    <view class="right"></view>
+  </view>
+</view>
