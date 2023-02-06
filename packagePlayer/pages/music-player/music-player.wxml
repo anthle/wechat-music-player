@@ -21,7 +21,7 @@
 <swiper bindchange="onSwiperChange" style="height: {{contentHeight}}px;" current='{{currentPage}}'>
   <swiper-item class="music">
       <view class="album">
-        <image class="image" src="{{currentSong.al.picUrl}}" mode="widthFix"/>
+        <image class="image" src="{{currentSong.al.picUrl}}" mode="aspectFit"/>
       </view>
       <view class="info">
           <view class="name">{{currentSong.al.name}}</view>
@@ -29,18 +29,18 @@
       </view>
       <view class="lyric">{{currentLyricText}}</view>
       <view class="progress">
-        <slider class="slider" block-size="15" value='{{slideValue}}' bindchange='onSlidreChange' bindchanging="onSliderChanging"/>
+        <slider class="slider" block-size="15" value='{{sliderValue}}' bindchange='onSlidreChange' bindchanging="onSliderChanging"/>
         <view class="time"> 
           <view class="current">{{fmt.formatDuration(currentTime)}}</view>
           <view class="duration">{{fmt.formatDuration(duration)}}</view>
         </view>
       </view>
       <view class="controls">
-        <image class="btn mode" src="/assets/images/player/play_{{playModeName[playModeIndex]}}.png" bindtap="onModeBtnTap" />
-        <image class="btn perv" src="/assets/images/player/play_prev.png" bindtap="onPervBtnTap" />
-        <image class="btn play" src="/assets/images/player/play_{{ isPlaying ? 'pause' : 'resume' }}.png" bindtap="onPlayOrPauseTap" />
-        <image class="btn next" src="/assets/images/player/play_next.png" bindtap="onNextBtnTap" />
-        <image class="btn list" src="/assets/images/player/play_music.png" />
+        <image class="btn mode" src="../assets/player/play_{{playModeName[playModeIndex]}}.png" bindtap="onModeBtnTap" />
+        <image class="btn perv" src="../assets/player/play_prev.png" bindtap="onPervBtnTap" />
+        <image class="btn play" src="../assets/player/play_{{ isPlaying ? 'pause' : 'resume' }}.png" bindtap="onPlayOrPauseTap" />
+        <image class="btn next" src="../assets/player/play_next.png" bindtap="onNextBtnTap" />
+        <image class="btn list" src="../assets/player/play_music.png" />
       </view>
   </swiper-item>
   <swiper-item>

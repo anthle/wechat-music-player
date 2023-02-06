@@ -18,7 +18,6 @@ Page({
       videoList:newVideoList
     })
     this.data.offset = this.data.videoList.length
-    console.log(res.hasMore);
     this.data.hasMore = res.hasMore
   },
   // 上拉加载更多

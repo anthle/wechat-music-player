@@ -18,7 +18,10 @@ Page({
     recommentMenuList:[],
     rankingInfos:{},
     // 检测rankingInfos是否为空
-    isRankingData:false
+    isRankingData:false,
+    // 当前正在播放的歌曲
+    currentSong:{},
+    isPlaying:true
   },
   onLoad(){
     this.fetchGetMusicBanner()
@@ -28,12 +31,15 @@ Page({
       if(!value.tracks) return
       this.setData({recommendSongs:value.tracks.slice(0,6)})
     })
+
     rankingStore.onState('newSongRanking',this.handleNewSongRanking)
     rankingStore.onState('originSongRanking',this.handleOriginSongRanking)
     rankingStore.onState('upSongRanking',this.handleUpSongRanking)
+
     recommendStore.dispatch('fetchRecommendSongAction')
     rankingStore.dispatch("fetchRankingDataAction")
 
+    playerStore.onStates(['currentSong','isPlaying'],this.handlePlayInfos)
   },
   onClickInput(){
     wx.navigateTo({
@@ -86,9 +92,37 @@ Page({
     })
   },
 
+  handlePlayInfos({currentSong,isPlaying}){
+    if (currentSong) {
+      this.setData({currentSong})
+    }
+    if (isPlaying !== undefined) {
+      this.setData({isPlaying})
+    }
+  },
+
   onSongItemTap(event){
     const index = event.currentTarget.dataset.index
     playerStore.setState('playSongsList',this.data.recommendSongs)
     playerStore.setState('playSongsIndex',index)
+  },
+
+  onPauseOrPlayBtn(){
+    playerStore.dispatch('changeMusicStatusAction')
+  },
+
+  onAlbumTap(){
+    wx.navigateTo({
+      // url: '/pages/music-player/music-player',
+      url: '../../packagePlayer/pages/music-player/music-player'
+    })
+  },
+
+  onunload(){
+    recommendStore.offState('recommendSongInfo')
+    rankingStore.offState("newSongRanking")
+    rankingStore.offState("originSongRanking")
+    rankingStore.offState("upSongRanking")
+    playerStore.offState("currentSong")
   }
 })

@@ -1,5 +1,5 @@
 <!--pages/detail-video/detail-video.wxml-->
-<wxs src="../../utils/format.wxs" module="fmt"/>
+<wxs src="../../../utils/format.wxs" module="fmt"/>
 <view>
   <video 
   class="video"

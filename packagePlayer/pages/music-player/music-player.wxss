@@ -128,10 +128,10 @@
   display: none;
 }
 .lyric-list .item{
-  line-height: 50px;
-  overflow: visible;
-  /* text-overflow: ellipsis;
-  white-space: nowrap; */
+  height: 35px;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
 }
 .lyric-list .item.active{
   color: #fff;

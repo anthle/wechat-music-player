@@ -1,5 +1,5 @@
 // pages/detail-video/detail-video.js
-import {getMVUrl,getMvInfo,getMvRelatedVideo} from '../../services/video'
+import {getMVUrl,getMvInfo,getMvRelatedVideo} from '../../../services/video'
 
 Page({
   data:{

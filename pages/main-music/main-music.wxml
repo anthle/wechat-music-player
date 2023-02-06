@@ -41,3 +41,18 @@
     </block>
   </view>
 </view>
+
+<view class="play-bar-placeholder" wx:if="{{currentSong.name}}">
+  
+</view>
+<view class="play-bar" wx:if="{{currentSong.name}}">
+  <view class="left">
+    <image class="album album-anim" src="{{currentSong.al.picUrl}}" style="animation-play-state: {{isPlaying? 'runing' : 'paused'}};" bindtap="onAlbumTap" />
+    <view class="name">{{currentSong.name}}</view>
+  </view>
+  <view class="right">
+    <image class="play" src="/assets/images/music/{{isPlaying?'pause':'play'}}_icon.png" bindtap="onPauseOrPlayBtn" />
+    <image class="icon" src="/assets/images/music/playlist_icon.png" mode=""/>
+    <!-- <image src="/assets/images/music/playlist_icon.png" mode=""/> -->
+  </view>
+</view>

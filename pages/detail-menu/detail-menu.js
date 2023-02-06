@@ -18,7 +18,6 @@ Page({
     }
     Promise.all(allPromise).then(res=>{
       this.setData({songMenus:res})
-      console.log(this.data.songMenus);
     })
   }
 })
